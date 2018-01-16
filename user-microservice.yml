@@ -1,0 +1,23 @@
+eureka:
+  host: 
+    name: xignzi
+  client: 
+    serviceUrl:
+      defaultZone: http://xignzi:8761/eureka/
+  instance: 
+    prefer-ip-address: true
+    instance-id: ${spring.application.name} ${spring.cloud.client.hostname}:${server.port}
+    healthcheck:
+      enable: true
+
+feign:
+  hystrix:
+    enabled: true
+    
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
