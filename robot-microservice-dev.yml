@@ -1,10 +1,3 @@
-spring:
-  application:
-    name: robot-microservice
-
-server:
-  port: 8080
-
 eureka:
   host: 
     name: xignzi
@@ -13,6 +6,6 @@ eureka:
       defaultZone: http://xignzi:8761/eureka/
   instance: 
     prefer-ip-address: true
-    #instance-id: ${spring.application.name} ${spring.cloud.client.hostname}:${server.port}
+    instance-id: ${spring.application.name} ${spring.cloud.client.hostname}:${server.port}
     healthcheck:
       enable: true
