@@ -1,4 +1,6 @@
 version: 2.0
+server:
+  port: 8070
 management:
   security:
     enabled: false
