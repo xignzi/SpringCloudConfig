@@ -11,6 +11,14 @@ eureka:
     healthcheck:
       enable: true
 
+spring: 
+  rabbitmq:
+    host: xignzi
+    port: 5672
+#    username: 
+#    password:
+  
+
 feign:
   hystrix:
     enabled: true
