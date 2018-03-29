@@ -1,9 +1,6 @@
 version: 6.0
 server:
   port: 8070
-management:
-  security:
-    enabled: false
 eureka:
   host: 
     name: xignzi
