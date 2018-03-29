@@ -1,7 +1,5 @@
-version: 4.0
-management: 
-  security: 
-    enabled: false
+version: 1.0
+
 server:
   port: 8070
 eureka:
