@@ -1,6 +1,6 @@
-version: 2.0
+version: 3.0
 server:
-  port: 8070
+  port: 8071
 management:
   security:
     enabled: false
