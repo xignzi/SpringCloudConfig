@@ -1,4 +1,4 @@
-version: 6.0
+version: 1.0
 server:
   port: 8070
 eureka:
