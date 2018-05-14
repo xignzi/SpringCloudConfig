@@ -1,4 +1,9 @@
 spring:
+  rabbitmq:
+    host: 172.16.102.12
+    port: 5672
+    username: guest
+    password: guest
   datasource:
     url: jdbc:mysql://172.16.170.61:3306/aca0a6ab0a?autoReconnect=true&useUnicode=true&characterEncoding=GB2312&useOldAliasMetadataBehavior=true
     driverClassName: com.mysql.jdbc.Driver
