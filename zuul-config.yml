@@ -7,10 +7,10 @@ spring:
 
 eureka:
   host: 
-    name: xignzi
+    name: 172.16.102.12
   client: 
     serviceUrl:
-      defaultZone: http://xignzi:8761/eureka/
+      defaultZone: http://172.16.102.12:8762/eureka/
   instance: 
     prefer-ip-address: true
     instance-id: ${spring.application.name} ${spring.cloud.client.hostname}:${server.port}
