@@ -25,8 +25,8 @@ eureka:
 zuul: 
   routes:
       user: 
-        path: /api/user/**
-        serviceId: user-microservice
+        path: /api/templ/**
+        serviceId: templservice
       robot: 
         path: /api/robot/**
         serviceId: robot-microservice
