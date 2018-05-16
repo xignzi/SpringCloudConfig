@@ -28,8 +28,8 @@ zuul:
         path: /api/templ/**
         serviceId: templservice
       robot: 
-        path: /api/robot/**
-        serviceId: robot-microservice
+        path: /templapp/**
+        serviceId: angular
 #  TokenFilter:
 #    post: 
 #      disable: false
