@@ -7,8 +7,8 @@ spring:
   zipkin:
     base-url: http://xignzi:9000
   sleuth:
-    feign:
-      enabled: true
+#    feign:
+#      enabled: true
     sampler:
       percentage: 1
   rabbitmq:
