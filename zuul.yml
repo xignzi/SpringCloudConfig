@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: zuul
+  zipkin:
+    base-url: http://xignzi:9000
   rabbitmq:
     host: 172.16.102.12
     port: 5672
