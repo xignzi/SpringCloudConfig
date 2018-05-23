@@ -1,4 +1,9 @@
+server:
+  port: 80 
+
 spring:
+  application:
+    name: zuul
   rabbitmq:
     host: 172.16.102.12
     port: 5672
@@ -25,11 +30,8 @@ eureka:
 zuul: 
   routes:
       user: 
-        path: /api/templ/**
-        serviceId: templservice
-      robot: 
-        path: /templapp/**
-        serviceId: angular
+        path: /api/user/**
+        serviceId: user
 #  TokenFilter:
 #    post: 
 #      disable: false
