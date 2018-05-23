@@ -7,6 +7,8 @@ spring:
   zipkin:
     base-url: http://xignzi:9000
   sleuth:
+    feign:
+      enabled: false
     sampler:
       percentage: 1
   rabbitmq:
@@ -14,7 +16,6 @@ spring:
     port: 5672
     username: guest
     password: guest
-
 
 logging: 
   level: 
