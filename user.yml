@@ -1,18 +1,6 @@
 server:
   port: 8070
 
-eureka:
-  host: 
-    name: 172.16.102.12
-  client: 
-    serviceUrl:
-      defaultZone: http://172.16.102.12:8762/eureka/
-  instance: 
-    prefer-ip-address: true
-    instance-id: ${spring.application.name} ${spring.cloud.client.hostname}:${server.port}
-    healthcheck:
-      enable: true
-
 spring: 
   application:
     name: user
@@ -26,6 +14,20 @@ spring:
     port: 5672
     username: guest
     password: guest
+    
+eureka:
+  host: 
+    name: 172.16.102.12
+  client: 
+    serviceUrl:
+      defaultZone: http://172.16.102.12:8762/eureka/
+  instance: 
+    prefer-ip-address: true
+    instance-id: ${spring.application.name} ${spring.cloud.client.hostname}:${server.port}
+    healthcheck:
+      enable: true
+
+
   
 
 feign:
