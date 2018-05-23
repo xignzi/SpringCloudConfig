@@ -6,7 +6,7 @@ spring:
   application:
     name: robot
     zipkin:
-      base-url: http://xignzi:9000/
+      base-url: http://xignzi:9000
   sleuth:
     sampler:
       percentage: 1
