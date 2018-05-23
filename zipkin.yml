@@ -1,0 +1,8 @@
+server:
+  port: 9000
+  
+spring: 
+  cloud:
+    config:
+      uri: http://xignzi:8100
+      name: zipkin
