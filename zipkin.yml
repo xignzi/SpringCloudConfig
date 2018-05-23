@@ -2,7 +2,28 @@ server:
   port: 9000
   
 spring: 
+  application:
+    name: user-microservice
+  rabbitmq:
+    host: 172.16.102.12
+    port: 5672
+    username: guest
+    password: guest
   cloud:
     config:
       uri: http://xignzi:8100
       name: zipkin
+
+eureka:
+  host: 
+    name: xignzi
+  client: 
+    serviceUrl:
+      defaultZone: http://xignzi:8761/eureka/
+  instance: 
+    prefer-ip-address: true
+    instance-id: ${spring.application.name} ${spring.cloud.client.hostname}:${server.port}
+    healthcheck:
+      enable: true
+
+  
