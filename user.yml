@@ -3,7 +3,7 @@ server:
 
 spring: 
   application:
-    name: robot
+    name: user
   zipkin:
     base-url: http://xignzi:9000
   sleuth:
