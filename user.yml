@@ -14,6 +14,12 @@ spring:
     port: 5672
     username: guest
     password: guest
+
+
+logging: 
+  level: 
+    org.springframework.sleuth: DEBUG
+    org.springframework.zipkin: DEBUG
     
 eureka:
   host: 
