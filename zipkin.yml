@@ -4,6 +4,9 @@ server:
 spring: 
   application:
     name: zipkin
+  sleuth:
+    sampler:
+      percentage: 1
   rabbitmq:
     host: 172.16.102.12
     port: 5672
