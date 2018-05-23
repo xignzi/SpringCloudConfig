@@ -10,7 +10,11 @@ spring:
   sleuth:
     sampler:
       percentage: 1
-      
+
+logging: 
+  level: 
+    org.springframework.cloud.sleuth: DEBUG
+    
 eureka:
   host: 
     name: 172.16.102.12
