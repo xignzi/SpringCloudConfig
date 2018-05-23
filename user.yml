@@ -18,8 +18,7 @@ spring:
 
 logging: 
   level: 
-    org.springframework.sleuth: DEBUG
-    org.springframework.zipkin: DEBUG
+    root: DEBUG
     
 eureka:
   host: 
