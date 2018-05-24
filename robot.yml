@@ -21,7 +21,7 @@ spring:
       host: 172.16.102.12
       port: 8500
       discovery:
-        healthCheckPath: ${management.contextPath}/health
+        healthCheckPath: /health
         healthCheckInterval: 15s
         instance-id: robot
 
