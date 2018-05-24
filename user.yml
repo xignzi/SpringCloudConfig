@@ -27,6 +27,14 @@ spring:
     port: 5672
     username: guest
     password: guest
+  cloud:   
+    consul: 
+      host: 172.16.102.12
+      port: 8500
+      discovery:
+        healthCheckPath: ${management.contextPath}/health
+        healthCheckInterval: 15s
+        instance-id: user
 
 logging: 
   level: 
