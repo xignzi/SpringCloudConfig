@@ -16,19 +16,28 @@ spring:
     port: 5672
     username: guest
     password: guest
+  consul:
+      host: 172.16.102.12
+      port: 8500
+      discovery:
+        healthCheckPath: ${management.contextPath}/health
+        healthCheckInterval: 15s
+        instance-id: robot
 
 logging: 
   level: 
     org.springframework.cloud.sleuth: DEBUG
-    
-eureka:
-  host: 
-    name: 172.16.102.12
-  client: 
-    serviceUrl:
-      defaultZone: http://172.16.102.12:8762/eureka/
-  instance: 
-    prefer-ip-address: true
-    instance-id: ${spring.application.name} ${spring.cloud.client.hostname}:${server.port}
-    healthcheck:
-      enable: true
+
+
+
+#eureka:
+#  host: 
+#    name: 172.16.102.12
+#  client: 
+#    serviceUrl:
+#      defaultZone: http://172.16.102.12:8762/eureka/
+#  instance: 
+#    prefer-ip-address: true
+#    instance-id: ${spring.application.name} ${spring.cloud.client.hostname}:${server.port}
+#    healthcheck:
+#      enable: true
