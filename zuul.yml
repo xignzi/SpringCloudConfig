@@ -1,25 +1,6 @@
 server:
   port: 80 
 
-spring:
-  application:
-    name: zuul
-  zipkin:
-    base-url: http://xignzi:9000
-  sleuth:
-    sampler:
-      percentage: 1
-  rabbitmq:
-    host: 172.16.102.12
-    port: 5672
-    username: guest
-    password: guest
-  datasource:
-    url: jdbc:mysql://172.16.170.61:3306/aca0a6ab0a?autoReconnect=true&useUnicode=true&characterEncoding=GB2312&useOldAliasMetadataBehavior=true
-    driverClassName: com.mysql.jdbc.Driver
-    username: aca0a6ab0a
-    password: 5@f@974e
-
 eureka:
   host: 
     name: 172.16.102.12
@@ -32,8 +13,26 @@ eureka:
     healthcheck:
       enable: true
 
+spring:
+  application:
+    name: zuul
+  zipkin:
+    enabled: true
+    #base-url: http://xignzi:9000
+  sleuth:
+    sampler:
+      percentage: 1
+  rabbitmq:
+    host: 172.16.102.12
+    port: 5672
+    username: guest
+    password: guest
+
 zuul: 
   routes:
+      robot: 
+        path: /api/robot/**
+        serviceId: robot
       user: 
         path: /api/user/**
         serviceId: user
