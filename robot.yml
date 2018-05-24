@@ -6,10 +6,16 @@ spring:
   application:
     name: robot
   zipkin:
-    base-url: http://xignzi:9000
+    enabled: true
+    #base-url: http://xignzi:9000
   sleuth:
     sampler:
       percentage: 1
+  rabbitmq:
+    host: 172.16.102.12
+    port: 5672
+    username: guest
+    password: guest
 
 logging: 
   level: 
