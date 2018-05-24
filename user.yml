@@ -1,26 +1,6 @@
 server:
   port: 8070
 
-spring: 
-  application:
-    name: user
-  zipkin:
-    base-url: http://xignzi:9000
-  sleuth:
-#    feign:
-#      enabled: true
-    sampler:
-      percentage: 1
-  rabbitmq:
-    host: 172.16.102.12
-    port: 5672
-    username: guest
-    password: guest
-
-logging: 
-  level: 
-    org.springframework.cloud.sleuth: DEBUG
-    
 eureka:
   host: 
     name: 172.16.102.12
@@ -33,8 +13,24 @@ eureka:
     healthcheck:
       enable: true
 
+spring: 
+  application:
+    name: user
+  zipkin:
+    enabled: true
+    #base-url: http://xignzi:9000
+  sleuth:
+    sampler:
+      percentage: 1
+  rabbitmq:
+    host: 172.16.102.12
+    port: 5672
+    username: guest
+    password: guest
 
-  
+logging: 
+  level: 
+    org.springframework.cloud.sleuth: DEBUG
 
 feign:
   hystrix:
